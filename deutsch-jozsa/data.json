@@ -3,7 +3,7 @@
         {
             "label": "jupyter project Zip file",
             "type": "fas fa-download",
-            "link": "./assets/codelabs/prog-quantique/DeutschJozsaAlgorithm.zip"
+            "link": "https://github.com/tagazok/my-workshops/raw/master/deutsch-jozsa/DeutschJozsaAlgorithm.zip"
         },
         {
             "label": "Introduction à l'informatique quantique",
