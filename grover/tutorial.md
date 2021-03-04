@@ -102,10 +102,10 @@ Then click on the link : *run the SolveSATWithGrover kata as a Jupyter Notebook*
 
 --sep--
 ---
-title: GroversAlgorithm - help
+title: GroversAlgorithm - tips
 ---
 
-# GroversAlgorithm : help
+# GroversAlgorithm : tips
 
 Here you will find tips and links to help you solve this kata.
 
@@ -140,81 +140,85 @@ Look here for documentation about [```for``` loops](https://docs.microsoft.com/e
 This procedure doesn't process qubits. Therefore it is expressed in Q# by a function and not an operation. This function transforms the operation `markingOracle` into another operation that we may call `phaseOracle`. The [**return**](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/statements/returnsandtermination?view=qsharp-preview) syntax is used.
 
 An intermediate step can be to write an operation `OracleConverterWithQubitRegister`
-first. `OracleConverterWithQubitRegister` takes two arguments : the oracle `markingOracle` and a qubit array `register`. It applies the `phaseOracle` to `register`. An additional qubit is necessary in the body of `OracleConverterWithQubitRegister`. To declare and use quantum memory (qubits), the keyword is [**use**](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/working-with-qubits?view=qsharp-preview#allocating-qubits). Vous aurez également besoin de la [porte quantique de Hadamard (**H**)](https://en.wikipedia.org/wiki/Quantum_logic_gate#Hadamard_(H)_gate) et de la [porte quantique **X**](https://en.wikipedia.org/wiki/Quantum_logic_gate#Pauli-X_gate). Pour appliquer les portes **X** et **H** à `qubit` on utilise en Q# la syntaxe suivante:
+first. `OracleConverterWithQubitRegister` takes two arguments : the oracle `markingOracle` and a qubit array `register`. It applies the `phaseOracle` to `register`. An additional qubit is necessary in the body of `OracleConverterWithQubitRegister`. To declare and use quantum memory (qubits), the keyword is [**use**](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/statements/quantummemorymanagement?view=qsharp-preview). You will also need the [Hadamard quantum gate (**H**)](https://en.wikipedia.org/wiki/Quantum_logic_gate#Hadamard_(H)_gate) and the [**X** quantum gate](https://en.wikipedia.org/wiki/Quantum_logic_gate#Pauli-X_gate). To apply a gate **X** or **H** to `qubit`, use this syntax in Q#:
 ```csharp
 X(qubit);
 H(qubit);
 ```
 
-Pour écrire la fonction `OracleConverter`, on peut se servir de la possibilité en Q# de définir des [opérations partielles](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/operations-functions?view=qsharp-preview#partial-application).
+To write the function `OracleConverter`, it is possible in Q# to define [partial operations](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/expressions/partialapplication?view=qsharp-preview).
 
 ## Task 2.1
 
-la [porte quantique **H**](https://en.wikipedia.org/wiki/Quantum_logic_gate#Hadamard_(H)_gate) permet de créer un état de superposition à partir des états de base |0> et |1>.
+The [quantum gate **H**](https://en.wikipedia.org/wiki/Quantum_logic_gate#Hadamard_(H)_gate) yields superposiion states from the computational basis states |0> and |1>.
 
 
 ## Task 2.2
 
-Selon l'implémentation choisie, les syntaxes suivantes peuvent être utiles:
-- le foncteur [**Controlled**](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/operations-functions#controlled-and-adjoint-operations).
-- la [porte quantique **Z**](https://en.wikipedia.org/wiki/Quantum_logic_gate#Pauli-Z_(%7F'%22%60UNIQ--postMath-00000028-QINU%60%22'%7F)_gate).
-- les fonctions [**Most**](https://docs.microsoft.com/en-us/qsharp/api/qsharp/microsoft.quantum.arrays.most) et [**Tail**](https://docs.microsoft.com/en-us/qsharp/api/qsharp/microsoft.quantum.arrays.tail).
+Depending on the targeted solution, this syntax can be useful:
+- the [**Controlled** functor](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/expressions/functorapplication#controlled-functor).
+- the [**Z** quantum gate](https://en.wikipedia.org/wiki/Quantum_logic_gate#Pauli-Z_(%7F'%22%60UNIQ--postMath-00000028-QINU%60%22'%7F)_gate).
+- Functions [**Most**](https://docs.microsoft.com/en-us/qsharp/api/qsharp/microsoft.quantum.arrays.most) and [**Tail**](https://docs.microsoft.com/en-us/qsharp/api/qsharp/microsoft.quantum.arrays.tail). Don't forget to open the Microsoft.Quantum.Arrays namespace to use these functions.
 
 ## Task 2.3
 
-Appliquer une transformation de Hadamard consiste à appliquer une porte de Hadamard (**H**) à chaque qubit.
+Applying a Hadamard transform consists in applying a Hadamard gate (**H**) to every qubit.
 
 ## Task 3.1
 
-Cet [article Wikipédia](https://en.wikipedia.org/wiki/Grover%27s_algorithm) décrit l'algorithme de Grover.
+This [Wikipédia article](https://en.wikipedia.org/wiki/Grover%27s_algorithm) describes Grover's algorihtm.
 
 ## Task 3.2
 
-- La fonction **Message** utilise la syntaxe suivante:
+- The function **Message** follows this syntax:
 ```csharp
 Message ("texte à afficher");
 ```
 
-- Une mesure est faite à l’aide de l’opération M() :
+- The Q# operation **M()** measures a qubit:
 ```csharp
 let myResult = M(qubit);
 ```
 
-`myResult` est alors de type `Result`. Le type `Result` est constitué de deux valeurs : `Zero` et `One`. 
-Vous pouvez aller consulter [ici](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/working-with-qubits#measurements) la documentation sur la mesure quantique en Q#.
-La fonction [MultiM](https://docs.microsoft.com/en-us/qsharp/api/qsharp/microsoft.quantum.measurement.multim) permet de mesurer directement un array de qubits.
+`myResult` has type `Result`. Objects of type `Result` have two possible values : `Zero` and `One`. 
+See [here](https://docs.microsoft.com/en-us/qsharp/api/qsharp/microsoft.quantum.intrinsic.m?view=qsharp-preview) for the syntax of a quantum measurement in Q#.
+The function [MultiM](https://docs.microsoft.com/en-us/qsharp/api/qsharp/microsoft.quantum.measurement.multim?view=qsharp-preview) in the namespace Microsoft.Quantum.Measurement makes it possible to directly measure an array of qubits.
 
 
 --sep--
 ---
-title: SolveSATWithGrover - aide
+title: SolveSATWithGrover - tips
 ---
+
+# SolveSATWithGrover : tips
+
+Here you will find tips and links to help you solve this kata.
 
 ## Task 1.1
 
-Il est courant de devoir appliquer le foncteur **Controlled** à la porte X. Lorsque le contrôle ne se fait que sur 1 qubit ou sur 2 qubits, il existe un raccourci syntaxique:
-- contrôle sur 1 qubit:
+It is common to apply the functor **Controlled** to the **X** quantum gate. When the control is on only 1 or 2 qubits, here is a more concise syntax:
+- control on 1 qubit:
   
 ```csharp
 CNOT(controlQubit, targetQubit);
 ```
-est strictement équivalent à 
+is strictly equivalent to: 
 ```csharp
 Controlled X ([controlQubit], targetQubit);
 ```
-- contrôle sur 2 qubits:
+- control on 2 qubits:
   
 ```csharp
 CCNOT(FirstControlQubit, SecondControlQubit, targetQubit);
 ```
-est strictement équivalent à 
+is strictly equivalent to:
 ```csharp
 Controlled X ([FirstControlQubit, SecondControlQubit], targetQubit);
 ```
 
 ## Task 1.2
 
-Pensez à utiliser la syntaxe [**within {..} apply {..}**](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/control-flow#conjugations).
+Don't forget the syntax [**within {..} apply {..}**](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/control-flow#conjugations) for nice looking Q# code 😊.
 
 ## Task 1.4
 
