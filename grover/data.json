@@ -10,5 +10,17 @@
           "type": "fas fa-download",
           "link": "./assets/codelabs/grover/SolveSATWithGrover.zip"
       }
+    ],
+    "infos": {
+        "title": "QuantX Hackathon - Grover",
+        "github": "https://github.com/vivienlonde/my-workshops",
+        "description": "This workshop will make you familiar with a fundational quantum algorithm : Grover's. Tou will apply it to the concrete problem of boolean satisfiability."
+    },
+    "authors": [
+        {
+            "name": "Vivien Londe",
+            "url": "https://twitter.com/vivien_londe",
+            "avatar": "vivien.png"
+        }
     ]
 }
