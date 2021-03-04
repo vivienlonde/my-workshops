@@ -3,12 +3,12 @@
         {
             "label": "jupyter notebook GroversAlgorithm",
             "type": "fas fa-download",
-            "link": "https://github.com/tagazok/my-workshops/raw/master/grover/GroversAlgorithm.zip"
+            "link": "./assets/codelabs/grover/GroversAlgorithm.zip"
         },
         {
           "label": "jupyter notebook SolveSATWithGrover",
           "type": "fas fa-download",
-          "link": "https://github.com/tagazok/my-workshops/raw/master/grover/SolveSATWithGrover.zip"
+          "link": "./assets/codelabs/grover/SolveSATWithGrover.zip"
       }
     ]
 }

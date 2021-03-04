@@ -1,5 +1,5 @@
 ---
-title: Hackathon quantique
+title: Quantum Hackathon
 ---
 
 --sep--
@@ -7,132 +7,140 @@ title: Hackathon quantique
 title: Introduction
 ---
 
-# QuantX - Hackathon quantique
+# QuantX - Quantum Hackathon
 
 ## Introduction
 
-test : Vous allez réaliser les katas [GroversAlgorithm](https://github.com/microsoft/QuantumKatas/tree/main/GroversAlgorithm) et [SolveSATWithGrover](https://github.com/microsoft/QuantumKatas/tree/main/SolveSATWithGrover).
+You are about to solve the katas **GroversAlgorithm** and **SolveSATWithGrover**.
 
-Ces katas peuvent être réalisés localement en utilisant un jupyter notebook. Cela nécessite d'installer miniconda (ou Anaconda). L'installation de l'environnement est détaillée sur la page Préparation.
+If you prefer, you can run these katas locally with a jupyter notebook. If you choose this option, you need to have installed miniconda (or Anaconda). See *Preparation* for detailed instructions on the installation of such a local environment.
 
-Il est également possible de réaliser les kata entièrement en ligne (donc sans installation) en utilisant Binder. Néanmoins on privilégiera l'installation locale qui permet d'exécuter le code Q# plus rapidement et de ne pas risquer de voir sa connexion interrompue.
+Otherwise it is possible to run these katas entirely online by leveraging Binder. No installation needed in this case. Please favor the local installation for a faster execution and to avoid connexion issues.
 
-## Pré-requis
 
-Afin de réaliser ce Hackathon, vous aurez besoin:
+## Prerequisites
 
-- D'un ordinateur avec un navigateur internet
-- D'une connexion internet
-- Et c'est tout !
+For this Hackathon, you will need:
 
-Des compétences basiques sur les [portes logiques](https://fr.wikipedia.org/wiki/Fonction_logique) peuvent être utiles.
+- A browser
+- An internet connexion
+- And that's it !
 
---sep--
----
-title: Objectif du hackathon
----
-
-## Objectif du hackathon
-
-Ce hackathon, **qui ne nécessite pas de connaissances préalables en programmation quantique**, vous permettra d'appliquer l'un des algorithmes quantiques les plus fondamentaux (l'algorithme de Grover) à la **résolution d'un problème concret** et utile dans de nombreux domaines. L'algorithme de Grover est à l'origine d'un grand nombre d'algorithmes quantiques encore plus sophistiqués et pouvant être vus comme des généralisations de Grover. 
+Basic knowledge of [logic gates](https://en.wikipedia.org/wiki/Logic_gate) can be useful.
 
 --sep--
 ---
-title: Préparation
+title: Objectives of the Hackathon
 ---
 
-## Préparation
+## Objectif of the Hackathon
 
-### Faire le workshop en local
+This Hackathon **doesn't assume any prior knowledge on Quantum Computing**. First, you will rediscover one of the most fundamental quantum algorithms : Grover's algorithm. Grover's algorithm has been generalised in many different directions : quantum walks, quantum singular value transformation .. It's a great foundation to build upon in order to understand quantum algorithmss.
 
-Si vous n'avez pas déjà installé une distribution Anaconda, installez miniconda : <a href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">https://docs.conda.io/en/latest/miniconda.html</a>.
+Second, you will use Grover's quantum algorithm to **solve a concrete problem** : the satisfiability problem (SAT). SAT solvers are used in many different domains, for example circuit design and automatic theorem proving.
 
-Ouvrez un prompt miniconda (ou Anaconda).
+--sep--
+---
+title: Preparation
+---
 
-Créez un nouvel environnement Conda appelé ```qsharp-env``` avec les packages requis (notamment Jupyter Notebook et IQ#) :
+## Preparation
+
+### First option : local installation
+
+* If you haven't already installed an Anaconda distribution, you can install miniconda here : <a href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">https://docs.conda.io/en/latest/miniconda.html</a>.
+
+* Open a miniconda (or Anaconda) prompt.
+
+* Create and activate a new conda environment named ```qsharp-env``` with the required packages (including Jupyter Notebook and IQ#) by running the following commands:
+
 ```bash
 conda create -n qsharp-env -c quantum-engineering qsharp notebook
 
 conda activate qsharp-env
 ```
 
-Lancez la commande suivante dans le même terminal :
+* To populate your local package cache with all required QDK components, run the following command from the same terminal :
+
 ```bash
 python -c "import qsharp"
 ```
 
-Bravo ! Vous avez maintenant le kernel IQ# et Jupyter qui vous fournissent les fonctionnalités de base pour compiler et lancer des opérations Q# depuis un Jupyter Notebook Q#.
+You now have the IQ# kernel for Jupyter, which provides the core functionality for compiling and running Q# operations from Q# Jupyter Notebooks.
 
-<a href="/workshops/assets/codelabs/grover/GroversAlgorithm.zip" target="_blank">Téléchargez le kata GroversAlgorithm</a> (si le lien ne fonctionne pas, cliquez directement à gauche dans la partie RESOURCES)
+* <a href="/workshops/assets/codelabs/grover/GroversAlgorithm.zip" target="_blank">Download the kata GroversAlgorithm</a> (if the link is down, please click directly on "jupyter notebook GroversAlgorithm" on the left hand side of this page in the RESOURCES section.)
+
+* Unzip the file and navigate to the unzipped folder in your cConda terminal.
 
 Décompressez le fichier et naviguez jusqu'au dossier dans votre terminal Conda.
 
-Lancez le jupyter notebook :
+* Run the jupyter notebook :
 
 ```bash
 jupyter notebook GroversAlgorithm.ipynb
 ```
 
-### C'est parti !
-Suivez les instructions en remplissant les zones de code. Pour valider une étape, cliquez sur l'îcone ```step forward``` à gauche du champ ou utilisez la combinaison de touche ```Ctrl + Enter```.
-L'output de votre code apparaitra en dessous du champ.
+### That's it !
+Follow the instructions of the jupyter notebook. To validate a step, click on ```step forward``` on the left or use the key combination ```Ctrl + Enter```.
+Your code output will appear below.
 
-Une fois le kata GroversAlgorithm terminé, vous pouvez attaquer le kata SolveSATWithGrover:
+Once you have completed the GroversAlgorithm kata, you can follow-up with the SolveSATWithGrover kata:
 
-<a href="/workshops/assets/codelabs/grover/SolveSATWithGrover.zip" target="_blank">Téléchargez le kata SolveSATWithGrover</a> (si le lien ne fonctionne pas, cliquez directement à gauche dans la partie RESOURCES)
+<a href="/workshops/assets/codelabs/grover/SolveSATWithGrover.zip" target="_blank">Download the kata SolveSATWithGrover</a> (if the link is down, please click directly on "jupyter notebook GroversAlgorithm" on the left hand side of this page in the RESOURCES section.)
 
 
-### Alternative: faire les katas en ligne
+### Alternative : run the katas online
 
-Rendez vous sur le repo Github du kata GroversAlgorithm <a href="https://github.com/microsoft/QuantumKatas/tree/main/GroversAlgorithm" target="_blank">ici</a>.
+Go to the <a href="https://github.com/microsoft/QuantumKatas/tree/main/GroversAlgorithm" target="_blank">Githhub repo</a> of GroversAlgorithm kata.
 
-Cliquez ensuite sur le lien run the GroversAlgorihtm kata as a Jupyter Notebook!
+Then click on the link : *run the GroversAlgorihtm kata as a Jupyter Notebook*.
 
-Une fois le kata GroversAlgorithm terminé, vous pouvez attaquer le kata SolveSATwithGrover <a href="https://github.com/microsoft/QuantumKatas/tree/main/SolveSATWithGrover" target="_blank">ici</a>.
+Once you have completed the GroversAlgorithm kata, you can follow-up with the <a href="https://github.com/microsoft/QuantumKatas/tree/main/SolveSATWithGrover" target="_blank">SolveSATWithGrover</a> kata.
 
-Cliquez ensuite sur le lien run the SolveSATWithGrover kata as a Jupyter Notebook!
+Then click on the link : *run the SolveSATWithGrover kata as a Jupyter Notebook*.
 
 
 --sep--
 ---
-title: GroversAlgorithm - aide
+title: GroversAlgorithm - help
 ---
 
-# GroversAlgorithm : aide
+# GroversAlgorithm : help
 
-Vous trouverez ci-dessous des tips et des liens vers des ressources pour vous aider à faire ce kata.
+Here you will find tips and links to help you solve this kata.
 
 ## Taks 1.1
 
-En Q# une opération est une procédure qui peut manipuler de la mémoire quantique (des qubits). Le type de chaque argument est donné après le symbole `:` suivant chaque nom de variable. Ici la variable `queryRegister` est donc un tableau de qubits et la variable `target` est un qubit. Le dernier type donné (ici `Unit`) est celui renvoyé par l'opération. Ici `Unit` signifie que l'opération ne renvoie rien. C'est l'équivalent de `void` dans d'autres languages. On se passera donc du mot-clé `return` pour cette opération. `is Adj` signifie qu'on peut automatiquement générer l'opération 'adjointe' (on dit aussi l'opération inverse). On peut ne pas s'en occuper dans un premier temps.
+In Q#, an operation is a procedure that can process quantum memory (qubits). The type of each argument is given after the symbol `:` that follows the name of each variable. Here the variable `queryRegister` is hence a qubit array and the variable `target` is a qubit. The last given type (here: `Unit`) is the type of the object returned by the operation. Here `Unit` means that the operation returns nothing. It is similar to `void` in other languages. Therefore this operation doesn't make use of the key-word `return`. `is Adj` means that it is possible to automatically generate the 'adjoint' operation (i.e. the inverse operation). Let's not worry about it for now.
 
-Une opération qui ne renvoie rien n'est pas forcément inutile car la manipulation de la mémoire quantique se fait sur place, par effet de bord. Ici par exemple l'opération `Oracle_AllOnes` va modifier l'état (i.e. la valeur interne) du qubit `target`.
+An operation that returns noting (whise output type is `Unit`) is not useless since quantum memory processing happens in place : it is a side-effect of the operation. Here for instance, the operation `Oracle_AllOnes` modifies the state (i.e. the internal value) of the qubit `target`.
 
-Vous aurez besoin de la [porte quantique **X**](https://en.wikipedia.org/wiki/Quantum_logic_gate#Pauli-X_gate), équivalent quantique d'une porte **NOT**. Vous aurez également besoin du [foncteur **Controlled**](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/operations-functions#controlled-and-adjoint-operations):
+You will need the [quantum gate **X**](https://en.wikipedia.org/wiki/Quantum_logic_gate#Pauli-X_gate), the quantum equivalent of a **NOT** gate. You will also need the [**Controlled** functor](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/expressions/functorapplication#controlled-functor).
 
-Contrôler une porte quantique **U** par un ou plusieurs qubits de contrôle ```[controlQubits]``` permet d’appliquer cette porte au qubit cible ```targetQubit``` si et seulement si tous les qubits de contrôle sont dans l’état |1>. C’est d’une certaine façon l’analogue quantique d’un ```if``` classique. On utilise la syntaxe suivante :
+Controlling a quantum operation **U** by an array of control qubits ```[controlQubits]``` amounts to applying **U** to ```targetQubit``` if and only if every qubit of the control array are in the state |1>. It is somewhat similar to a classical ```if```. It follows the following syntax :
 
 
 ```csharp
 Controlled U ([controlQubits], targetQubit);
 ```
 
-```[controlledQubits]``` est un tableau de qubits. ```targetQubit```  est un qubit.
+```[controlledQubits]``` is an array of qubits. ```targetQubit```  is a qubit.
 
 
 ## Task 1.2
 
-Le foncteur **Controlled** permet d'exprimer la condition que tous les qubits de contrôle sont dans l'état |1>. Il n'existe pas de syntaxe permettant d'exprimer nativement une autre condition. Il faut donc se ramener au cas où tous les qubits de contrôle sont dans l'état |1> en modifiant la valeur des qubits de contrôle avant (et après!) l'utilisation du foncteur **Controlled**.
+The **Controlled** functor expresses the condition that all the contol qubits are in the state |1>. There is no Q# native syntax to express an other condition, such as some control qubits are in the state |0> and others are in the state |1>. It is therefore necessary to reduce to the all |1> case by modifying the value of the control qubits before (and after!) applying the **Controlled** operation.
 
-Vous pouvez vous documenter sur comment faire une boucle ```for``` et une condition ```if``` en Q# [ici](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/control-flow?oicd=WTMCID)
+Look here for documentation about [```for``` loops](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/statements/iterations?oicd=WTMCID) and classical [```if``` conditions](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/statements/conditionalbranching).
 
-*Bonus:* pour un code élégant et concis, je vous recommande la syntaxe [**within {..} apply {..}**](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/control-flow#conjugations).
+*Bonus:* For a nice and concise code, I recommend the [**within {..} apply {..}**](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/control-flow#conjugations) syntax.
 
 ## Tasks 1.4
 
-Cette procédure ne manipule pas de qubits. C'est pourquoi il s'agit en Q# d'une fonction et non pas d'une opération. Cette fonction transforme l'opération `markingOracle` en une autre opération qu'on peut appeler `phaseOracle`. On utilise la syntaxe [**return**](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/control-flow?view=qsharp-preview#return-statement).
+This procedure doesn't process qubits. Therefore it is expressed in Q# by a function and not an operation. This function transforms the operation `markingOracle` into another operation that we may call `phaseOracle`. The [**return**](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/statements/returnsandtermination?view=qsharp-preview) syntax is used.
 
-Une étape intermédiaire peut être d'écrire d'abord une opération `OracleConverterWithQubitRegister` qui prend en arguments le `markingOracle` et un tableau de qubits `register` et implémente le `phaseOracle` à `register`. On aura besoin de manipuler un qubit supplémentaire au sein de `OracleConverterWithQubitRegister`. La syntaxe pour déclarer de la mémoire quantique (des qubits) est [**using**](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/working-with-qubits?view=qsharp-preview#allocating-qubits). Vous aurez également besoin de la [porte quantique de Hadamard (**H**)](https://en.wikipedia.org/wiki/Quantum_logic_gate#Hadamard_(H)_gate) et de la [porte quantique **X**](https://en.wikipedia.org/wiki/Quantum_logic_gate#Pauli-X_gate). Pour appliquer les portes **X** et **H** à `qubit` on utilise en Q# la syntaxe suivante:
+An intermediate step can be to write an operation `OracleConverterWithQubitRegister`
+first. `OracleConverterWithQubitRegister` takes two arguments : the oracle `markingOracle` and a qubit array `register`. It applies the `phaseOracle` to `register`. An additional qubit is necessary in the body of `OracleConverterWithQubitRegister`. To declare and use quantum memory (qubits), the keyword is [**use**](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/working-with-qubits?view=qsharp-preview#allocating-qubits). Vous aurez également besoin de la [porte quantique de Hadamard (**H**)](https://en.wikipedia.org/wiki/Quantum_logic_gate#Hadamard_(H)_gate) et de la [porte quantique **X**](https://en.wikipedia.org/wiki/Quantum_logic_gate#Pauli-X_gate). Pour appliquer les portes **X** et **H** à `qubit` on utilise en Q# la syntaxe suivante:
 ```csharp
 X(qubit);
 H(qubit);
