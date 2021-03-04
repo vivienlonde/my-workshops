@@ -14,7 +14,7 @@
     "infos": {
         "title": "QuantX Hackathon - Grover",
         "github": "https://github.com/vivienlonde/my-workshops",
-        "description": "This workshop will make you familiar with a fundational quantum algorithm : Grover's. Tou will apply it to the concrete problem of boolean satisfiability (SAT)."
+        "description": "Rediscover a fundational quantum algorithm : Grover's. You will then apply it to the concrete problem of boolean satisfiability (SAT)."
     },
     "authors": [
         {
