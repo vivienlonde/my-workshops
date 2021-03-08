@@ -102,7 +102,7 @@ Then click on the link : *run the SolveSATWithGrover kata as a Jupyter Notebook*
 
 --sep--
 ---
-title: GroversAlgorithm - tips
+title: Kata GroversAlgorithm - tips
 ---
 
 # GroversAlgorithm : tips
@@ -190,7 +190,7 @@ The function [MultiM](https://docs.microsoft.com/en-us/qsharp/api/qsharp/microso
 title: SolveSATWithGrover - tips
 ---
 
-# SolveSATWithGrover : tips
+# Kata SolveSATWithGrover : tips
 
 Here you will find tips and links to help you solve this kata.
 
