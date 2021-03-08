@@ -1,14 +1,31 @@
 {
     "resources": [
         {
-            "label": "jupyter project Zip file",
+            "label": "jupyter notebook DeutschJosza",
             "type": "fas fa-download",
-            "link": "https://github.com/tagazok/my-workshops/raw/master/deutsch-jozsa/DeutschJozsaAlgorithm.zip"
+            "link": "./assets/codelabs/deutsch-jozsa/DeutschJozsaAlgorithm.zip"
         },
         {
             "label": "Introduction à l'informatique quantique",
             "type": "fab fa-youtube",
-            "link": "https://www.youtube.com/watch?v=uQhyl_7dmzE"
-        }        
+            "link": "https://www.youtube.com/watch?v=kletYD2UFTs"
+        }  
+    ],
+    "infos": {
+        "title": "Kata DeutschJosza",
+        "github": "https://github.com/vivienlonde/my-workshops",
+        "description": "Understand where the power of Quantum Computers comes from : Solve a task with a quantum algorithms faster than you could with a classical algorithm !"
+    },
+    "authors": [
+        {
+            "name": "Olivier Leplus",
+            "url": "https://twitter.com/olivierleplus",
+            "avatar": "olivier.png"
+        },
+        {
+            "name": "Vivien Londe",
+            "url": "https://twitter.com/vivien_londe",
+            "avatar": "vivien.jpg"
+        }
     ]
 }
