@@ -222,8 +222,9 @@ Don't forget the syntax [**within {..} apply {..}**](https://docs.microsoft.com/
 
 ## Task 1.4
 
-- Sélection d’un sous-registre de qubits
-Pour définir le sous-array de l’array `myArray` dont les indices sont compris entre `start` et `stop`, on utilise la syntaxe suivante :
+- Selecting a subarray of qubits :
+
+To define the subarray of the array `myArray` whose indices are between `start` and `stop`, use the following syntax:
 
 ```csharp
 let myArray = [10, 11, 12, 13, 14, 15];
@@ -232,9 +233,9 @@ let stop = 3;
 let mySubarray = myArray[start .. stop]; //  mySubarray = [11, 12, 13].
 ```
 
-Pour plus d'informations vous pouvez aller voir le paragraphe [Array slices](https://docs.microsoft.com/en-us/quantum/user-guide/language/expressions#array-expressions).
+For more information see the paragraph [Array slices](https://docs.microsoft.com/en-us/quantum/user-guide/language/expressions#array-expressions).
 
-- La fonction **Length** renvoie la longueur d'un array:
+- The function **Length** returns the length of an array:
   
 ```csharp
 let N = Length(myArray);
@@ -242,53 +243,53 @@ let N = Length(myArray);
 
 ## Task 1.5
 
-### Variables mutables
+### Mutables variables
 
-Les variables déclarées sous la forme :
+Variables are declared as :
 
 ```csharp
 let myImmutableVariable = 2;
 ```
-sont immutables.
+are immutables.
 
-Pour les variables mutables, on utilise les mots-clés `mutable` pour la déclaration et `set` pour la modification :
+For mutable variables, we use the keywords `mutable` for declaration and `set` for modification :
 
 ```csharp
 mutable myMutableVariable = 4 ;
 set myMutableVariable = 3;
 ```
-Vous pouvez aller consulter la documentation des variables mutables [ici](https://docs.microsoft.com/en-us/quantum/user-guide/using-qsharp/variables#mutable-variables).
+You can learn more about mutable variables [here](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/statements/variabledeclarationsandreassignments).
 
-### Array mutable
+### Mutable array 
 
-Pour déclarer un array mutable, on peut utiliser la syntaxe suivante :
+To declare a mutable array, you can use this syntax :
 ```csharp
 mutable myArray = new Int[0];
 ```
 
-On déclare ainsi un array de longueur 0 (donc vide). Pour ajouter une valeur à cet array, on utilise la syntaxe suivante :
+The above line of code declares an array xith length 0 (i.e. empty). To add a value to this array, use this syntax :
 ```csharp
 myArray += [myNewValue];
 ```
 
 ### Copy & Update
 
-Pour modifier une valeur d’un array, on utilise la syntaxe suivante :
+To modify a value of an array, use this syntax :
 ```csharp
 myArray w/= myIndex <- myNewValue;
 ```
-La valeur située en position `myIndex` de `myArray` devient alors `myNewValue`. 
+Thevalue at position `myIndex` of `myArray` becomes `myNewValue`. 
 
-Vous pouvez aller voir le paragraphe Copy & Update Expressions de la documentation [ici](https://docs.microsoft.com/en-us/quantum/user-guide/language/expressions#array-expressions).
+You can look up documentation on Copy & Update Expressions [here](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/expressions/copyandupdateexpressions).
 
 
 ## Task 3.2
 
-Après avoir manipulé des qubits, il est nécessaire de les remettre dans l'état |0> avant de les libérer. On utilise pour ça la fonction Reset :
+After processing qubits, you have to bring them back to the state |0> before releasing them. To achieve this, you can use the function ```Reset``` :
 ```csharp
 Reset(qubit);
 ```
-Pour un array de qubits, on peut également utiliser la fonction ResetAll :
+For an array of qubits, you can use the function ```ResetAll``` :
 ```csharp
 ResetAll(qubitArray);
 ```
@@ -300,6 +301,6 @@ title: Conclusion
 
 # Conclusion
 
-Bravo, vous avez fini!
+Congratulations, you have made it!
 
-Vous pouvez continuer à approfondir la programmation quantique en allant voir [les autres katas](https://github.com/microsoft/QuantumKatas/tree/master).
+You can go deeper on Quanutm Computing by solving [the other katas](https://github.com/microsoft/QuantumKatas/tree/master).
