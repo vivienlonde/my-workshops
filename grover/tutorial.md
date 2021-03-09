@@ -86,7 +86,7 @@ Your code output will appear below.
 
 Once you have completed the GroversAlgorithm kata, you can follow-up with the SolveSATWithGrover kata:
 
-<a href="/workshops/assets/codelabs/grover/SolveSATWithGrover.zip" target="_blank">Download the kata SolveSATWithGrover</a> (if the link is down, please click directly on "jupyter notebook GroversAlgorithm" on the left hand side of this page in the RESOURCES section.)
+<a href="https://github.com/vivienlonde/my-workshops/blob/master/grover/SolveSATWithGrover.zip?raw=true" target="_blank">Download the kata SolveSATWithGrover</a> (if the link is down, please click directly on "jupyter notebook GroversAlgorithm" on the left hand side of this page in the RESOURCES section.)
 
 
 ### Alternative : run the katas online
