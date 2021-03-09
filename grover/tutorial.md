@@ -70,7 +70,7 @@ You now have the IQ# kernel for Jupyter, which provides the core functionality f
 
 * <a href="https://github.com/vivienlonde/my-workshops/blob/master/grover/GroversAlgorithm.zip?raw=true" target="_blank">Download the kata GroversAlgorithm</a> 
 
-* Unzip the file and navigate to the unzipped folder in your cConda terminal.
+* Unzip the file and navigate to the unzipped folder in your Conda terminal.
 
 Décompressez le fichier et naviguez jusqu'au dossier dans votre terminal Conda.
 
@@ -172,7 +172,7 @@ This [Wikipédia article](https://en.wikipedia.org/wiki/Grover%27s_algorithm) de
 
 - The function **Message** follows this syntax:
 ```csharp
-Message ("texte à afficher");
+Message ("this is the message I want to print");
 ```
 
 - The Q# operation **M()** measures a qubit:
