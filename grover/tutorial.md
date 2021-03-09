@@ -46,7 +46,7 @@ title: Preparation
 
 ## Preparation
 
-### First option : local installation
+### First option : local environment
 
 * If you haven't already installed an Anaconda distribution, you can install miniconda here : <a href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">https://docs.conda.io/en/latest/miniconda.html</a>.
 
