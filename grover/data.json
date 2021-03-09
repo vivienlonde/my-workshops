@@ -3,7 +3,7 @@
         {
             "label": "jupyter notebook GroversAlgorithm",
             "type": "fas fa-download",
-            "link": "./assets/codelabs/grover/GroversAlgorithm.zip"
+            "link": "https://github.com/vivienlonde/my-workshops/blob/master/grover/GroversAlgorithm.zip?raw=true"
         },
         {
           "label": "jupyter notebook SolveSATWithGrover",

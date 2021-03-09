@@ -68,7 +68,7 @@ python -c "import qsharp"
 
 You now have the IQ# kernel for Jupyter, which provides the core functionality for compiling and running Q# operations from Q# Jupyter Notebooks.
 
-* <a href="/#/workshops/grover/GroversAlgorithm.zip" target="_blank">Download the kata GroversAlgorithm</a> (if the link is down, please click directly on "jupyter notebook GroversAlgorithm" on the left hand side of this page in the RESOURCES section.)
+* <a href="https://github.com/vivienlonde/my-workshops/blob/master/grover/GroversAlgorithm.zip?raw=true" target="_blank">Download the kata GroversAlgorithm</a> (if the link is down, please click directly on "jupyter notebook GroversAlgorithm" on the left hand side of this page in the RESOURCES section.)
 
 * Unzip the file and navigate to the unzipped folder in your cConda terminal.
 
