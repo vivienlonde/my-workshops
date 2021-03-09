@@ -8,7 +8,7 @@
         {
           "label": "jupyter notebook SolveSATWithGrover",
           "type": "fas fa-download",
-          "link": "./assets/codelabs/grover/SolveSATWithGrover.zip"
+          "link": "https://github.com/vivienlonde/my-workshops/blob/master/grover/SolveSATWithGrover.zip?raw=true"
       }
     ],
     "infos": {
