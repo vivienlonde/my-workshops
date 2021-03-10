@@ -3,7 +3,7 @@
         {
             "label": "jupyter notebook DeutschJosza",
             "type": "fas fa-download",
-            "link": "./assets/codelabs/deutsch-jozsa/DeutschJozsaAlgorithm.zip"
+            "link": "https://github.com/vivienlonde/my-workshops/blob/master/deutsch-jozsa/DeutschJozsaAlgorithm.zip?raw=true"
         },
         {
             "label": "Introduction à l'informatique quantique",
