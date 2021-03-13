@@ -3,12 +3,12 @@
         {
             "label": "jupyter notebook GroversAlgorithm",
             "type": "fas fa-download",
-            "link": "https://github.com/vivienlonde/my-workshops/blob/master/grover/GroversAlgorithm.zip?raw=true"
+            "link": "https://github.com/microsoft/QuantumKatas/blob/main/GroversAlgorithm/GroversAlgorithm.ipynb"
         },
         {
           "label": "jupyter notebook SolveSATWithGrover",
           "type": "fas fa-download",
-          "link": "https://github.com/vivienlonde/my-workshops/blob/master/grover/SolveSATWithGrover.zip?raw=true"
+          "link": "https://github.com/microsoft/QuantumKatas/blob/main/SolveSATWithGrover/SolveSATWithGrover.ipynb"
       }
     ],
     "infos": {
