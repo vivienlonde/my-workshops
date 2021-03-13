@@ -137,7 +137,9 @@ Look here for documentation about [```for``` loops](https://docs.microsoft.com/e
 
 ## Tasks 1.4
 
-This procedure doesn't process qubits. Therefore it is expressed in Q# by a function and not an operation. This function transforms the operation `markingOracle` into another operation that we may call `phaseOracle`. The [**return**](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/statements/returnsandtermination?view=qsharp-preview) syntax is used. step can be to write an operation `OracleConverterWithQubitRegister`
+This procedure doesn't process qubits. Therefore it is expressed in Q# by a function and not an operation. This function transforms the operation `markingOracle` into another operation that we may call `phaseOracle`. The [**return**](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/statements/returnsandtermination?view=qsharp-preview) syntax is used.
+
+An intermediate step can be to write an operation `OracleConverterWithQubitRegister`
 first. `OracleConverterWithQubitRegister` takes two arguments : the oracle `markingOracle` and a qubit array `register`. It applies the `phaseOracle` to `register`. An additional qubit is necessary in the body of `OracleConverterWithQubitRegister`. To declare and use quantum memory (qubits), the keyword is [**use**](https://docs.microsoft.com/en-us/azure/quantum/user-guide/language/statements/quantummemorymanagement?view=qsharp-preview). You will also need the [Hadamard quantum gate (**H**)](https://en.wikipedia.org/wiki/Quantum_logic_gate#Hadamard_(H)_gate) and the [**X** quantum gate](https://en.wikipedia.org/wiki/Quantum_logic_gate#Pauli-X_gate). To apply a gate **X** or **H** to `qubit`, use this syntax in Q#:
 ```csharp
 X(qubit);
