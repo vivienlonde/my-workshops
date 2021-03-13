@@ -166,7 +166,7 @@ Applying a Hadamard transform consists in applying a Hadamard gate (**H**) to ev
 
 ## Task 3.1
 
-This [Wikipédia article](https://en.wikipedia.org/wiki/Grover%27s_algorithm) describes Grover's algorihtm.
+This [Wikipedia article](https://en.wikipedia.org/wiki/Grover%27s_algorithm) describes Grover's algorihtm.
 
 ## Task 3.2
 
